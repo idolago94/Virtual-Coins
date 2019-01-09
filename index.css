@@ -1,0 +1,316 @@
+
+     .start-animation{
+        z-index: 999;
+    }
+
+    .main{
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+    nav img{
+        border-radius: 50%;
+    }
+    
+
+    /* parallax */
+    .parallax { 
+    /* The image used */
+    background-image: url("parallax.jpg");
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    /*  */
+
+
+    /* progress bar  */
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        margin: auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .loader b{
+        line-height: 90px;
+        margin: 0px 20px;
+    }
+    /*  */
+
+
+    /* favourite list in the navigation */
+    .fav-list{
+        margin: 0px 5px;
+        position: relative;
+        float: right;
+    }
+    
+    .fav-list ul{
+        position: absolute;
+        float: right;
+        right: 1%;
+        z-index: 999;
+        padding: 0px !important;
+        width: auto;
+    }
+
+    .fav-list ul li{
+        padding: 5px;
+        position: relative;
+        font-size: 14px;
+    }
+
+    .fav-list ul li:not(:nth-child(1)){    
+        border-top: 1px solid black;
+    }
+    
+    .fav-list ul li span{
+        position: relative;
+        float: right;
+        top: 2px;
+        right: -4px;
+        color: red;
+    }
+
+    .fav-list button{
+        width: 100%;
+    }
+    /*  */
+
+
+    /* the card css */
+    .card{
+        margin: 5px;
+        padding: 5px;
+        width: 30%;
+        box-sizing: border-box;
+        
+    }
+
+    .accordion{
+        overflow: hidden;
+    }
+
+    .moreInfo-body{
+        height: 170px;
+        padding: 0 !important;
+    }
+
+    .moreInfo-body img{
+        display: block;
+        margin: auto;
+    }
+    /*  */
+    
+    
+    
+    
+    /* module */
+    #dialog ul{
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #dialog ul li{
+        font-size: 25px;
+        position: relative;
+    }
+
+    #dialog ul li span{
+        position: relative;
+        float: right;
+        color: red;
+    }
+    /*  */
+
+    
+
+/* navigation bar */
+
+    /*----- Toggle Button -----*/
+    .toggle-nav {
+	display:none;
+    }
+
+    /*----- Menu -----*/
+    @media screen and (min-width: 860px) {
+	.menu {
+	width:100%;
+	padding:0px 18px;
+	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+	background:#303030;
+	}
+    }
+
+    .menu ul {
+    display:inline-block;
+    margin: 0;
+    padding-left: 5px;
+    }
+
+    .menu li {
+	float:left;
+	list-style:none;
+	font-size:17px;
+    }
+
+    .menu li:first-child{
+        margin: 0;
+        padding-right: 5px;
+    }
+
+    .menu li:first-child:hover{
+        background-color: #303030;
+    }
+
+    .menu li:hover{
+        border-bottom-left-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+        background-color: #777;
+        color: white;
+    }
+
+
+    .menu li:last-child {
+	margin-right:0px;
+    }
+
+    .menu a {
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+	color:#777;
+	transition:color linear 0.15s;
+    }
+
+    .menu a:hover, .menu .current-item a {
+	text-decoration:none;
+	color:#66a992;
+    }
+
+/*----- Search -----*/
+.search-form {
+	float:right;
+    display:inline-block;
+    margin-top: 0.5%;
+}
+
+.search-form input {
+	width:200px;
+	height:30px;
+	padding:0px 8px;
+	float:left;
+	border-radius:2px 0px 0px 2px;
+	font-size:13px;
+}
+
+.search-form button {
+	height:30px;
+	padding:0px 7px;
+	float:right;
+	border-radius:0px 2px 2px 0px;
+	background:#66a992;
+	font-size:13px;
+	font-weight:600;
+	text-shadow:0px 1px 0px rgba(0,0,0,0.3);
+	color:#fff;
+}
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+	.wrap {
+		width:90%;
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.search-form input {
+		width:120px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.menu {
+		position:relative;
+        display:inline-block;
+        line-height: 1;
+	}
+
+	.menu ul.active {
+		display:none;
+	}
+
+	.menu ul {
+		width:100%;
+		position:absolute;
+		top:120%;
+		left:0px;
+		padding:10px 18px;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+	}
+
+	.menu ul:after {
+		width:0px;
+		height:0px;
+		position:absolute;
+		top:0%;
+		left:22px;
+		content:'';
+		transform:translate(0%, -100%);
+		border-left:7px solid transparent;
+		border-right:7px solid transparent;
+		border-bottom:7px solid #303030;
+	}
+
+	.menu li {
+		margin:5px 0px 5px 0px;
+		float:none;
+		display:block;
+	}
+
+	.menu a {
+		display:block;
+	}
+
+	.toggle-nav {
+		padding:10px;
+		float:left;
+		display:inline-block;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+		text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+		color:#777;
+		font-size:20px;
+		transition:color linear 0.15s;
+	}
+
+	.toggle-nav:hover, .toggle-nav.active {
+		text-decoration:none;
+		color:#66a992;
+	}
+
+	.search-form {
+		margin:12px 0px 0px 20px;
+		float:left;
+	}
+
+	.search-form input {
+		box-shadow:-1px 1px 2px rgba(0,0,0,0.1);
+	}
+}
