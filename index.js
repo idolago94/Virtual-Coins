@@ -110,23 +110,27 @@ var currentPage=1;
     
         // navigation tabs
         // event:  click on the home navigation
-        $($(".nav-item.home .nav-link")[0]).click(function(){
-        
-        clearInterval(callChart);
-        
-        // event: enable click on the Live Report navigation
-        $($(".nav-item.live-report")[0]).click(function(){
-        liveReport();
-        });
-        
-        $("form input").css("opacity","1").prop("disabled",false);
-        $("form button").css("opacity","1").prop("disabled",false);
-        $(".fav-list").accordion({active: false});
-        currentPage=1;
-        $("nav input").val('');
-        createCardfromAPI();
+        $($(".nav-item.home .nav-link")[0]).click(function(e){
+            $(".nav-item .nav-link").removeClass('select');
+            e.target.classList.add('select');
+            clearInterval(callChart);
+            
+            // event: enable click on the Live Report navigation
+            $($(".nav-item.live-report .nav-link")[0]).click(function(){
+                $(".nav-item .nav-link").removeClass('select');
+                e.target.classList.add('select');
+                liveReport();
+            });
+            
+            $("form input").css("opacity","1").prop("disabled",false);
+            $("form button").css("opacity","1").prop("disabled",false);
+            $(".fav-list").accordion({active: false});
+            currentPage=1;
+            $("nav input").val('');
+            createCardfromAPI();
         });
     
+
         // event: click on the Live Report navigation
         $($(".nav-item.live-report")[0]).click(function(){
         liveReport();

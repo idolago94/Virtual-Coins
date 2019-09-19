@@ -15,17 +15,17 @@
 
     /* parallax */
     .parallax { 
-    /* The image used */
-    background-image: url("parallax.jpg");
+        /* The image used */
+        background-image: url("parallax.jpg");
 
-    /* Set a specific height */
-    height: 500px; 
+        /* Set a specific height */
+        height: 500px; 
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     /*  */
 
@@ -50,7 +50,6 @@
         line-height: 90px;
         margin: 0px 20px;
     }
-    /*  */
 
 
     /* favourite list in the navigation */
@@ -90,7 +89,6 @@
     .fav-list button{
         width: 100%;
     }
-    /*  */
 
 
     /* the card css */
@@ -144,41 +142,38 @@
 
     /*----- Toggle Button -----*/
     .toggle-nav {
-	display:none;
+	    display:none;
     }
 
     /*----- Menu -----*/
     @media screen and (min-width: 860px) {
-	.menu {
-	width:100%;
-	padding:0px 18px;
-	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-	background:#303030;
-	}
+        .menu {
+            width:100%;
+            padding:0px 18px;
+            box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+            background:#303030;
+        }
     }
 
     .menu ul {
-    display:inline-block;
-    margin: 0;
-    padding-left: 5px;
+        display:inline-block;
+        margin: 0;
+        padding-left: 5px;
     }
 
-    .menu li {
-	float:left;
-	list-style:none;
-	font-size:17px;
+    .menu ul li {
+        float:left;
+        list-style:none;
+        font-size:17px;
+        color: wheat;
     }
 
-    .menu li:first-child{
+    .menu ul li:first-child{
         margin: 0;
         padding-right: 5px;
     }
 
-    .menu li:first-child:hover{
-        background-color: #303030;
-    }
-
-    .menu li:hover{
+    .menu li:not(:first-child):hover{
         border-bottom-left-radius: 10px; 
         border-bottom-right-radius: 10px; 
         background-color: #777;
@@ -187,7 +182,14 @@
 
 
     .menu li:last-child {
-	margin-right:0px;
+	    margin-right:0px;
+    }
+
+    .menu ul li .nav-link.select {
+        border-bottom-left-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+        background-color: #777;
+        color: white;
     }
 
     .menu a {
