@@ -1,6 +1,12 @@
-
-     .start-animation{
+    body {
+        overflow: hidden;
+    }
+    
+    .start-animation{
         z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     .main{
@@ -54,7 +60,7 @@
 
     /* favourite list in the navigation */
     .fav-list{
-        margin: 0px 5px;
+        margin: 0px 10px;
         position: relative;
         float: right;
     }
@@ -72,6 +78,8 @@
         padding: 5px;
         position: relative;
         font-size: 14px;
+        width: 100%;
+        display: flex;
     }
 
     .fav-list ul li:not(:nth-child(1)){    
@@ -97,7 +105,7 @@
         padding: 5px;
         width: 30%;
         box-sizing: border-box;
-        
+        height: fit-content;
     }
 
     .accordion{
@@ -208,6 +216,7 @@
 	float:right;
     display:inline-block;
     margin-top: 0.5%;
+    align-items: center;
 }
 
 .search-form input {
@@ -216,19 +225,33 @@
 	padding:0px 8px;
 	float:left;
 	border-radius:2px 0px 0px 2px;
-	font-size:13px;
+    font-size:13px;
+    
+    border: none;
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
 }
 
-.search-form button {
-	height:30px;
-	padding:0px 7px;
-	float:right;
-	border-radius:0px 2px 2px 0px;
-	background:#66a992;
-	font-size:13px;
-	font-weight:600;
-	text-shadow:0px 1px 0px rgba(0,0,0,0.3);
-	color:#fff;
+.search-form .search-button-box {
+    height: 30px;
+    background-color: white;
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+    display: flex;
+    align-items: center;
+}
+
+.search-form .search-button {
+    height: 23px;
+    margin: 10px;
+}
+
+.fav-list .fav-button {
+    border-radius: 99px;
+    height: 27px;
+    padding: 3px;
+    margin: 0;
+    background-color: white;
 }
 
 /*----- Responsive -----*/

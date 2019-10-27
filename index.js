@@ -4,6 +4,7 @@ var currentPage=1;
     $(()=>{
         setTimeout(function(){
             $(".start-animation").hide('scale','slow');
+            $("body").css('overflow', 'unset');
         },5000);
 
 
@@ -22,15 +23,15 @@ var currentPage=1;
         // inits
         $(".pages").hide();
         $("#dialog").dialog({
-      autoOpen: false,
-      show: {
-        effect: "blind",
-        duration: 1000
-      },
-      hide: {
-        effect: "explode",
-        duration: 1000
-      }
+            autoOpen: false,
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            }
         });
         $(".fav-list").accordion({active: true , collapsible: true , heightStyle: "content" , icons: {header: "ui-icon-star" , activeHeader: "ui-icon-star"}});
         createCardfromAPI();
